@@ -1,40 +1,82 @@
-.Header{
+.Header {
     height: 40vw;
-    margin: 100px ;
-    background: url('header_img.png')no-repeat;
-    background-size: contain;
-    position:relative;
-    
-
-
+    margin: 5%;
+    background: url('header_img.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
 }
-.Header-contents{
-    position:absolute;
+
+.Header-contents {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 1.5vw;
     max-width: 50%;
-    bottom:20%;
-    left : 20vw;
+    bottom: 20%;
+    left: 20vw;
     animation: fadeIn 3s;
 }
-.Header-contents h2{
+
+.Header-contents h2 {
     font-weight: 500;
     color: white;
     font-size: max(4.5vw, 22px);
-
 }
-.Header-contents p{
+
+.Header-contents p {
     color: white;
     font-size: 1vw;
 }
-.Header-contents button{
-    border:none;
-    font-weight: #747474;
-    font-size: 500;
+
+.Header-contents button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
     font-size: max(1vw, 10px);
     border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Header-contents button:hover {
+    background-color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1050px) {
+    .Header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .Header-contents {
+        max-width: 65%;
+    }
+
+    .Header-contents p {
+        display: none;
+    }
+
+    .Header-contents button {
+        padding: 2vw 4vw;
+    }
+}
+
+@media (max-width: 1040px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
 }
