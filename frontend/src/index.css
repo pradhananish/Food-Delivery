@@ -4,6 +4,7 @@
   margin:auto;
   box-sizing: border-box;
   font-family: outfit;
+  scroll-behavior: smooth;
 }
 body{
   font-family: Arial, sans-serif;
